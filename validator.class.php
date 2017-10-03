@@ -1,6 +1,6 @@
 <?php
 /**
- * GUMP - A fast, extensible PHP input validation class.
+ * Validtr - A fast, extensible PHP input validation class.
  *
  * @author      Sean Nieuwoudt (http://twitter.com/SeanNieuwoudt)
  * @author      Filis Futsarov (http://twitter.com/FilisCode)
@@ -8,9 +8,9 @@
  *
  * @version     1.5
  */
-class GUMP
+class Validator
 {
-    // Singleton instance of GUMP
+    // Singleton instance of Validtr
     protected static $instance = null;
 
     // Validation rules for execution
@@ -39,7 +39,7 @@ class GUMP
     /**
      * Function to create and return previously created instance
      *
-     * @return GUMP
+     * @return Validtr
      */
 
     public static function get_instance(){
@@ -89,7 +89,7 @@ class GUMP
      * Shorthand method for inline validation.
      *
      * @param array $data       The data to be validated
-     * @param array $validators The GUMP validators
+     * @param array $validators The Validtr validators
      *
      * @return mixed True(boolean) or the array of error messages
      */
@@ -479,7 +479,7 @@ class GUMP
      *
      * Usage:
      *
-     * GUMP::set_field_names(array(
+     * Validtr::set_field_names(array(
      *  "name" => "My Lovely Name",
      *  "username" => "My Beloved Username",
      * ));
@@ -510,7 +510,7 @@ class GUMP
      *
      * Usage:
      *
-     * GUMP::set_error_messages(array(
+     * Validtr::set_error_messages(array(
      *  "validate_required"     => "{field} is required",
      *  "validate_valid_email"  => "{field} must be a valid email",
      * ));
@@ -1634,7 +1634,7 @@ class GUMP
     /**
      * Determine if the input is a valid human name [Credits to http://github.com/ben-s].
      *
-     * See: https://github.com/Wixel/GUMP/issues/5
+     * See: https://github.com/Wixel/Validtr/issues/5
      * Usage: '<index>' => 'valid_name'
      *
      * @param string $field
